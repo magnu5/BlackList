@@ -1,0 +1,2 @@
+# BlackList
+AdGuardHome master blacklist
