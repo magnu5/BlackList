@@ -146,7 +146,7 @@ curl -sS https://zeustracker.abuse.ch/blocklist.php?download=domainblocklist | t
 echo -e " ${TICK} \e[32m Adding domains to BLACKLIST... \e[0m"
 sleep 1
 
-curl -sS https://v.firebog.net/hosts/Shalla-mal.txt tee -a "${BLACKLIST_LOCATION}"/masterlist.txt >/dev/null
+curl -sS https://v.firebog.net/hosts/Shalla-mal.txt | tee -a "${BLACKLIST_LOCATION}"/masterlist.txt >/dev/null
 echo -e " ${TICK} \e[32m Adding domains to BLACKLIST... \e[0m"
 sleep 1
 
