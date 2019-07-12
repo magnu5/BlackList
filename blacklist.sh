@@ -1,6 +1,6 @@
 #!/bin/bash
 TICK="[\e[32m ✔ \e[0m]"
-BLACKLIST_LOCATION="/home/pi"
+BLACKLIST_LOCATION="/home/pi/git/BlackList"
 
 echo -e " \e[1m This script will download and add domains to your blacklist, add https://raw.githubusercontent.com/magnu5/BlackList/master/masterlist.txt as Filter in ADGuardHome \e[0m"
 sleep 1
