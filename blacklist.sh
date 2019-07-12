@@ -2,7 +2,7 @@
 TICK="[\e[32m ✔ \e[0m]"
 BLACKLIST_LOCATION="/home/pi/git/BlackList"
 
-echo -e " \e[1m This script will download and add domains to your blacklist, add https://raw.githubusercontent.com/magnu5/BlackList/master/masterlist.txt as Filter in ADGuardHome \e[0m"
+echo -e " \e[1m This script will download and add domains to your blacklist, add https://raw.githubusercontent.com/magnu5/BlackList/master/masterlist.txt as Filter in AdGuardHome \e[0m"
 sleep 1
 echo -e "\n"
 
@@ -164,6 +164,8 @@ sleep 1
 
 echo -e " ${TICK} \e[32m Removing duplicates... \e[0m"
 mv "${BLACKLIST_LOCATION}"/masterlist.txt "${BLACKLIST_LOCATION}"/masterlist.txt.old && cat "${BLACKLIST_LOCATION}"/masterlist.txt.old | sort | uniq >> "${BLACKLIST_LOCATION}"/masterlist.txt
+
+rm masterlist.txt.old
 
 echo -e " \e[1m  Happy AdBlocking :)\e[0m"
 echo -e "\n\n"
