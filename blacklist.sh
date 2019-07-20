@@ -6,6 +6,10 @@ echo -e " \e[1m This script will download and add domains to your blacklist, add
 sleep 1
 echo -e "\n"
 
+curl -sS https://dbl.oisd.nl | tee -a "${BLACKLIST_LOCATION}"/masterlist.txt >/dev/null
+echo -e " ${TICK} \e[32m Adding DBL OISD domains to BLACKLIST... \e[0m"
+sleep 1
+
 curl -sS https://raw.githubusercontent.com/magnu5/BlackList/master/domains.txt | tee -a "${BLACKLIST_LOCATION}"/masterlist.txt >/dev/null
 echo -e " ${TICK} \e[32m Adding Magnu5 domains to BLACKLIST... \e[0m"
 sleep 1
